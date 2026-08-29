@@ -28,8 +28,8 @@
     const DATA_URL='https://api.npoint.io/b6b06d28d1ba5bfe90af';
     const DEFAULT_EMPLOYEES=[{id:'a',name:'小林',color:'#ec8f63',start:'09:00',end:'18:00',active:true},{id:'b',name:'阿杰',color:'#5b8def',start:'10:00',end:'19:00',active:true}];
     let state={appointments:[],employees:DEFAULT_EMPLOYEES.map(x=>({...x}))};
-    let date=localDate(new Date()), selected='a', recs=[];
     const $=id=>document.getElementById(id), pad=n=>String(n).padStart(2,'0');
+    let date=localDate(new Date()), selected='a', recs=[];
     function localDate(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
     function toMin(v){const [h,m]=v.split(':').map(Number);return h*60+m}
     function fromMin(n){return pad(Math.floor(n/60))+':'+pad(n%60)}
